@@ -11,9 +11,7 @@ from flask import Flask, render_template, request
 # libraries for making count matrix and similarity matrix
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from IPython.display import HTML
-import shutil
-import os
+
 
 def create_sim():
     data = pd.read_csv('naukri_recommend.csv')
