@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="shadow p-3 mb-5 bg-white rounded">
+  <h1 style="color:rgb(0, 102, 255)">Welcome to the Job Recommender</h1>
+  <h3 style="color:rgb(0, 102, 255)">Enter the job role with loactions you would like to get recommendations.</h3>
+</div>
+
+  <form action="{{url_for('recommend')}}">
+    <input type="text" name="Job_Roles" class="form-control" placeholder="Job Role and Location name here">
+    <br>
+    <input type="submit" class="btn btn-info" value="Enter">
+  </form>
+{% endblock %}

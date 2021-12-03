@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+  {% if t=='s' %}
+  <div class="shadow p-3 mb-5 bg-white rounded">
+    <h3 style="color:rgb(0, 102, 255)">Sorry! This Job Role is not in our database.</h3>
+    <h3 style="color:rgb(0, 102, 255)">Please check if you spelled it correct.</h3>
+    <h3 style="color:rgb(0, 102, 255)">Or try with another Job Role.</h3>
+  </div>
+
+  {% else %}
+  <div class="shadow p-3 mb-5 bg-white rounded">
+    <h1 style="color:rgb(0, 102, 255)"> "{{Job_Roles}}" is a great choice.</h1>
+    <h3 style="color:rgb(0, 102, 255)">Here are the recommendation's of your Role</h3>
+  </div>
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<tr style="text-align: center;">
+{% for table in t %}
+      {{ table|safe }}
+{% endfor %}
+</body>
+</html>
+
+  {% endif %}
+
+{% endblock %}
